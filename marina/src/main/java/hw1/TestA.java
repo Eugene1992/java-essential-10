@@ -55,9 +55,8 @@ public class TestA {
         System.out.println("Tropic");
         System.out.println(getTropicAnimal(anim).name);
         System.out.println("Mass Animals");
-        System.out.println(sortMasAnimals(anim).name);
+        //System.out.println(sortMasAnimals(anim).name);
     }
-
 
 
     static Animal getHeigestAnimal(Animal[] anim) {
@@ -93,9 +92,8 @@ public class TestA {
                     anim[j] = anim[j + 1];
                     anim[j + 1] = tmp;
                 }
-                return animal;
+
             }
+        return animal;
     }
-
-
 }
