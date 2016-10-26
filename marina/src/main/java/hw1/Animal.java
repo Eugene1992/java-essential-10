@@ -1,7 +1,9 @@
+package hw1;
+
 /**
- * Created by Марина on 24.10.2016.
+ * Created by Марина on 25.10.2016.
  */
-public class Animals {
+public class Animal {
     String name;
     String type;
     int age;
