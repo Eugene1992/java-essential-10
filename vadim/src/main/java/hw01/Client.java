@@ -4,5 +4,4 @@ public class Client{
     int lastPay;
     int allPay;
     int allTime;
-
 }
