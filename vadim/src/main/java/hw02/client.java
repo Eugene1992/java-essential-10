@@ -29,4 +29,10 @@ public class Client{
     public static int getObjectsLimit(){
         return objectsLimit;
     }
+
+    public Client() {
+        setNextObjectsCount();
+        if (Client.getObjectsLimit() > 1) return false;
+
+    }
 }
