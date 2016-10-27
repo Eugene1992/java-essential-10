@@ -1,5 +1,3 @@
-package cw01;
-
 public class Client{
     String name;
     String projectName;
