@@ -11,7 +11,7 @@ public class Animal {
     private int height;
     static String home = "Zoo";
 
-    public Animal(String name, String type, int age, int mass, int height){
+    public Animal(String name, String type, int age, int mass, int height) {
         this.name = name;
         this.type = type;
         this.age = age;
@@ -19,17 +19,17 @@ public class Animal {
         this.height = height;
     }
 
-    public void wherelive(){
-        System.out.println(this.name+" "+ "live in" +" "+ home);
+    public void wherelive() {
+        System.out.println(this.name + " " + "live in" + " " + home);
     }
-    static void animalslive(){
+
+    static void animalslive() {
         System.out.println("All animals live in" + " " + home);
     }
-     public static String getHome(){
-         return home;
-     }
 
-
+    public static String getHome() {
+        return home;
+    }
 
 
 }

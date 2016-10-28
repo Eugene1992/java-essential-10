@@ -51,12 +51,12 @@ public class HomeWork02 {
 
     public static void sortClientsByTime(Client[] clients) {
         Client clientsBoofer;
-        for(int i = clients.length-1 ; i > 0 ; i--){
-            for(int j = 0 ; j < i ; j++){
-                if( clients[j].getAllTime() > clients[j+1].getAllTime() ){
+        for (int i = clients.length - 1; i > 0; i--) {
+            for (int j = 0; j < i; j++) {
+                if (clients[j].getAllTime() > clients[j + 1].getAllTime()) {
                     clientsBoofer = clients[j];
-                    clients[j] = clients[j+1];
-                    clients[j+1] = clientsBoofer;
+                    clients[j] = clients[j + 1];
+                    clients[j + 1] = clientsBoofer;
                 }
             }
         }

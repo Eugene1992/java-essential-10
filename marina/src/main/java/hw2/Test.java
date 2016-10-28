@@ -13,7 +13,6 @@ public class Test {
         Animal squirrel = new Animal("Squirrel", "wild", 6, 10, 2);
 
         wolf.wherelive();
-        //animalslive();
-
+        Animal.animalslive();
     }
 }

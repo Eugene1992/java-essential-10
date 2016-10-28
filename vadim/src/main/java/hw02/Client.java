@@ -1,6 +1,6 @@
 package hw02;
 
-public class Client{
+public class Client {
     private String name;
     private String projectName;
     private int lastPay;
@@ -9,26 +9,51 @@ public class Client{
     private static int objectsCount = 0;
     private static int objectsLimit;
 
-    public void setName(String name){this.name = name;}
-    public String getName(){return this.name;}
+    public void setName(String name) {
+        this.name = name;
+    }
 
-    public void setProjectName(String projectName){this.projectName = projectName;}
-    public String getProjectName(){return this.projectName;}
+    public String getName() {
+        return this.name;
+    }
 
-    public void setLastPay(int lastPay){this.lastPay = lastPay;}
-    public int getLastPay(){return this.lastPay;}
+    public void setProjectName(String projectName) {
+        this.projectName = projectName;
+    }
 
-    public void setAllPay(int allPay){this.allPay = allPay;}
-    public int getAllPay(){return this.allPay;}
+    public String getProjectName() {
+        return this.projectName;
+    }
 
-    public void setAllTime(int allTime){this.allTime = allTime;}
-    public int getAllTime(){return this.allTime;}
+    public void setLastPay(int lastPay) {
+        this.lastPay = lastPay;
+    }
 
-    public static void setNextObjectsCount(){
+    public int getLastPay() {
+        return this.lastPay;
+    }
+
+    public void setAllPay(int allPay) {
+        this.allPay = allPay;
+    }
+
+    public int getAllPay() {
+        return this.allPay;
+    }
+
+    public void setAllTime(int allTime) {
+        this.allTime = allTime;
+    }
+
+    public int getAllTime() {
+        return this.allTime;
+    }
+
+    public static void setNextObjectsCount() {
         Client.objectsCount = Client.objectsCount + 1;
     }
 
-    public static int getObjectsLimit(){
+    public static int getObjectsLimit() {
         return objectsLimit;
     }
 
