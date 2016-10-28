@@ -49,8 +49,8 @@ public class Client {
         return this.allTime;
     }
 
-    public static void setNextObjectsCount() {
-        Client.objectsCount = Client.objectsCount + 1;
+    public static int getObjectsCount() {
+        return objectsCount;
     }
 
     public static int getObjectsLimit() {
@@ -58,7 +58,7 @@ public class Client {
     }
 
     public Client() {
-        setNextObjectsCount();
+        objectsCount++;
 //        if (Client.getObjectsLimit() > 1) return false;
     }
 }

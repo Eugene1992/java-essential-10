@@ -2,6 +2,8 @@ package hw02;
 
 public class HomeWork02 {
     public static void main(String[] args) {
+        System.out.println("Count of clients(before): " + Client.getObjectsCount());
+
         Client clOne = new Client();
         clOne.setName("Andrej");
         clOne.setProjectName("Weather_widjet");
@@ -29,6 +31,8 @@ public class HomeWork02 {
         clFour.setLastPay(1000);
         clFour.setAllPay(15000);
         clFour.setAllTime(15);
+
+        System.out.println("Count of clients(after): " + Client.getObjectsCount());
 
         Client[] clients = {clOne, clTwo, clThree, clFour};
 
