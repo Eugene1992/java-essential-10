@@ -55,7 +55,9 @@ public class TestA {
         System.out.println("Tropic");
         System.out.println(getTropicAnimal(anim).name);
         System.out.println("Mass Animals");
-        //System.out.println(sortMasAnimals(anim).name);
+       // System.out.println(Animal[]anim);
+       // System.out.println(sortMass(anim).name);
+
     }
 
 
@@ -83,17 +85,17 @@ public class TestA {
         return tr;
     }
 
-    static int sortMasAnimals(int[] anim) {
-        int animal = anim[0];
-        for (int i = anim.length - 1; i > 0; i--)
-            for (int j = 0; j < i; j++) {
-                if (anim[j] > anim[j + 1]) {
-                    int tmp = anim[j];
-                    anim[j] = anim[j + 1];
-                    anim[j + 1] = tmp;
-                }
+//    static void Animal sortMass(Animal[] anim) {
+//
+//        for (int i = anim.length - 1; i > 0; i--)
+//            for (int j = 0; j < i; j++) {
+//                if (anim[j].mass > anim[j + 1].mass) {
+//                    int tmp = anim[j].mass;
+//                    anim[j] = anim[j + 1];
+//                    anim[j + 1].mass = tmp;
+//                }
 
             }
-        return animal;
-    }
-}
+//
+//    }
+//}

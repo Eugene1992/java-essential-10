@@ -23,7 +23,7 @@ public class TestProc {
         }
 
         String[] names = {empOneName, empTwoName, empThreeName, "Ivan"};
-        int[] ages = {empOneSalary, empTwoSalary, empThreeSalary, 50_000};
+        int[] ages = {empOneSalary, empTwoSalary, empThreeSalary, 50000};
 
         int maxSalary = ages[0];
         int maxSalaryIndex = 0;
