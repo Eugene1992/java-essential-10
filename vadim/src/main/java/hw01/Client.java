@@ -1,3 +1,5 @@
+package hw01;
+
 public class Client{
     String name;
     String projectName;

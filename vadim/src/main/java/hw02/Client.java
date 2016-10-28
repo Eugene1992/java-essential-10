@@ -1,3 +1,5 @@
+package hw02;
+
 public class Client{
     private String name;
     private String projectName;
@@ -32,7 +34,6 @@ public class Client{
 
     public Client() {
         setNextObjectsCount();
-        if (Client.getObjectsLimit() > 1) return false;
-
+//        if (Client.getObjectsLimit() > 1) return false;
     }
 }

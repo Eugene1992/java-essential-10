@@ -1,3 +1,5 @@
+package hw01;
+
 public class TestOOP{
     public static void main(String[] args) {
         Client clOne = new Client();
@@ -29,14 +31,13 @@ public class TestOOP{
         clFour.allTime = 15;
 
         Client[] clients = {clOne, clTwo, clThree, clFour};
-        Client[] clients = {clOne, clTwo, clThree, clFour};
 
         System.out.println(getBigestLastPay(clients).name);
 
         sortClientsByTime(clients);
 
         for (Client clientByTime : clients) {
-            System.out.println(clientByTime.name." - ".clientByTime.allTime);
+            System.out.println(clientByTime.name + " - " + clientByTime.allTime);
         }
     }
 
@@ -48,7 +49,7 @@ public class TestOOP{
         return max;
     }
 
-    public void sortClientsByTime(Client[] clients) {
+    public static void sortClientsByTime(Client[] clients) {
         Client clientsBoofer;
         for(int i = clients.length-1 ; i > 0 ; i--){
             for(int j = 0 ; j < i ; j++){

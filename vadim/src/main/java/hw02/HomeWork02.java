@@ -1,4 +1,6 @@
-public class TestOOP{
+package hw02;
+
+public class HomeWork02 {
     public static void main(String[] args) {
         Client clOne = new Client();
         clOne.setName("Andrej");
@@ -35,7 +37,7 @@ public class TestOOP{
         sortClientsByTime(clients);
 
         for (Client clientByTime : clients) {
-            System.out.println(clientByTime.getName()." - ".clientByTime.getAllTime());
+            System.out.println(clientByTime.getName() + " - " + clientByTime.getAllTime());
         }
     }
 
@@ -47,7 +49,7 @@ public class TestOOP{
         return max;
     }
 
-    public void sortClientsByTime(Client[] clients) {
+    public static void sortClientsByTime(Client[] clients) {
         Client clientsBoofer;
         for(int i = clients.length-1 ; i > 0 ; i--){
             for(int j = 0 ; j < i ; j++){
