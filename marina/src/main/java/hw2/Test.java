@@ -14,5 +14,18 @@ public class Test {
 
         wolf.wherelive();
         Animal.animalslive();
+
+        cow.say("Myyy");
+        parrot.screem("Fiastryyy!!!");
+
+        giraf.eat();
+        squirrel.eat();
+        elephant.eat();
+        Animal.animalsEat();
+
+        System.out.println("Height giraf -" + " " + giraf.getHeight());
+        System.out.println("Mass elephant -" + " " +elephant.getMass());
+        System.out.println("Mass squirrel -" + " " +squirrel.getMass());
+
     }
 }
