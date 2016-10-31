@@ -6,19 +6,23 @@ package hw3;
 public class Test {
     public static void main(String[] args) {
 
-            Shape square = new Shape(5);
-            Shape parallelogram = new Shape(7);
-            Shape rectangle = new Shape(4);
-            Shape rhombus = new Shape(8);
-            Shape trapeze = new Shape(6);
-            Shape triangle = new Shape(9);
+            Shape square = new Square(5);
+            Shape parallelogram = new Parallelogram(7,4);
+            Shape rectangle = new Rhombus(18, 7);
+            Shape rhombus = new Rectangle(12, 5);
+            Shape trapeze = new Triangle(13, 6);
+            Shape triangle = new Trapeze(15, 11, 8);
 
-            considerArea(square, parallelogram, rectangle, rhombus, trapeze, triangle);
+         calcArea(square, parallelogram, rectangle, rhombus, trapeze, triangle);
+
     }
-    static void considerArea (Shape... shapes) {
+
+    static void calcArea (Shape... shapes) {
         for (Shape shape : shapes) {
-
+            shape.calcArea();
         }
+
     }
+
 }
 

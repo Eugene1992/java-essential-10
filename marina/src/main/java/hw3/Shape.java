@@ -3,27 +3,16 @@ package hw3;
 /**
  * Created by Марина on 30.10.2016.
  */
-public class Shape {
-    protected String name;
-    protected double side;
+public abstract class Shape {
+
+    protected int side;
 
 
-
-    public Shape(String name) {
-        this.name = name;
+    public Shape(int side) {
+        this.side = side;
     }
 
-    public String getName() {
-        return name;
-    }
+    public abstract int calcArea();
 
-    public Shape(double side) {
-         this.side = side;
-        this.name = name;
-    }
-
-    public double getSide() {
-        return side;
-    }
 
 }

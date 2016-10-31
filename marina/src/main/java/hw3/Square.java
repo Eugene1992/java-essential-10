@@ -5,24 +5,15 @@ package hw3;
  */
 public class Square extends Shape {
 
-    public Square(String name) {
-        super(name);
-    }
 
-    public Square(double side) {
-        super((double)side);
+    public Square(int side) {
+        super(side);
 
     }
-    protected static void areaSquare(double side){
 
-        double area;
-
-        area = Math.pow(side, 2);
+    public int calcArea() {
+        return side * side;
     }
-    public void areaM(){
-        areaSquare(8);
 
-
-    }
 
 }
