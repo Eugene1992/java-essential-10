@@ -13,5 +13,12 @@ public class Test {
             Shape trapeze = new Shape(6);
             Shape triangle = new Shape(9);
 
+            considerArea(square, parallelogram, rectangle, rhombus, trapeze, triangle);
+    }
+    static void considerArea (Shape... shapes) {
+        for (Shape shape : shapes) {
+
+        }
     }
 }
+

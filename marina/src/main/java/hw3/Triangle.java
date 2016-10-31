@@ -7,4 +7,8 @@ public class Triangle extends Shape {
     public Triangle(double side) {
         super(side);
     }
+
+    public Triangle(String name) {
+        super(name);
+    }
 }
