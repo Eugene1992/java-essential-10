@@ -6,13 +6,12 @@ package hw3;
 public class Triangle extends Shape {
     private int height;
 
-
     public Triangle(int side, int height) {
         super(side);
         this.height = height;
     }
 
     public int calcArea() {
-        return (int) (0.5*side*height);
+        return (int) (0.5 * side * height);
     }
 }

@@ -7,12 +7,9 @@ public abstract class Shape {
 
     protected int side;
 
-
     public Shape(int side) {
         this.side = side;
     }
 
     public abstract int calcArea();
-
-
 }

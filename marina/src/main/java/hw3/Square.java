@@ -5,10 +5,8 @@ package hw3;
  */
 public class Square extends Shape {
 
-
     public Square(int side) {
         super(side);
-
     }
 
     public int calcArea() {

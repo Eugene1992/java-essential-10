@@ -12,6 +12,6 @@ public class Rhombus extends Shape {
     }
 
     public int calcArea() {
-        return side*height;
+        return side * height;
     }
 }

@@ -13,8 +13,6 @@ public class Parallelogram extends Shape {
 
     public int calcArea() {
         return side*height;
-
     }
-
 }
 

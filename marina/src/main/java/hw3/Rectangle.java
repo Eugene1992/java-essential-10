@@ -4,14 +4,14 @@ package hw3;
  * Created by Марина on 30.10.2016.
  */
 public class Rectangle extends Shape {
-    private int firstside;
+    private int firstSide;
 
-    public Rectangle(int side, int firstside) {
+    public Rectangle(int side, int firstSide) {
         super(side);
-        this.firstside = firstside;
+        this.firstSide = firstSide;
     }
 
     public int calcArea() {
-        return side * firstside;
+        return side * firstSide;
     }
 }
