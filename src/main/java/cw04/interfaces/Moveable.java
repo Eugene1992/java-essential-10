@@ -10,6 +10,7 @@ public interface Moveable {
     public abstract int calcDistance(int time); // before Java 1.8
 
     public static void s() {
+
         System.out.println("Hello from static method");
     }
 
