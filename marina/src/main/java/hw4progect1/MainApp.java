@@ -5,68 +5,77 @@ import java.util.Scanner;
 /**
  * Created by Марина on 01.11.2016.
  */
-//public class MainApp {
-//   private static EmployeeDAO empl = new EmployeeDAOimpl();
-//   private static Scanner scanner = new Scanner(System.in);
-//
-//    public static void main(String[] args) {
-//        start();
-//    }
-//    public static void start(){
-//        boolean exit = false;
-//        while (!exit) {
-//            System.out.println("Enter: /n 1 - to add employee, /n 2 - to update employee, /3 - to delete employee," +
-//                    " /n 4 - to get one employee, /5 - to get all employee  ");
-//        }
-//            String choise = scanner.next();
-//            if (choise.equals("exit")){
-//                exit = true;
-//                continue;
-//
-//        }
-//        switch (choise){
-//            case "1":
-//                System.out.println("Enter name employee");
-//                String name = scanner.nextLine();
-//                System.out.println("Enter salary employee");
-//                int sal = scanner.nextInt();
-//                dao.add(new Employee (String name, int sal));
-//                System.out.println();
-//                break;
-//            case "2":
-//                System.out.println("Enter id employee");
-//                int empId = scanner.nextInt();
-//                Employee empl = dao.get(empId);
-//                System.out.printf("%s, %d", name, sal );
-//                break;
-//            case "3":
-//                System.out.println("Enter id employee");
-//                empId = scanner.nextInt();
-//                System.out.println("Enter name employee");
-//                name = scanner.nextLine();
-//                System.out.println("Enter salary employee");
-//                sal = scanner.nextInt();
-//                Employee empl = dao.update(name, sal);
-//                System.out.println("Employee has been update");
-//                break;
-//            case "4":
-//                System.out.println("Enter id employee");
-//                empId = scanner.nextInt();
-//                dao.delete(empId);
-//                break;
-//            case "5":
-//                Employee [] employees = dao.getAll();
-//                if (employees.length>0){
-//                    for (int i = 0; i < employees.length; i++);
-//                    System.out.printf("%s, &d", name,sal );
-//                }
-//                else {
-//                    System.out.println("Try again");
-//                }
-//                break;
-//        }
-//
-//    }
-//
-//}
+public class MainApp {
+    private static EmployeeDAO dao = new EmployeeDAOimpl();
+    private static Scanner scanner = new Scanner(System.in);
+
+    public static void main(String[] args) {
+        start();
+    }
+
+    public static void start() {
+        boolean exit = false;
+        while (!exit) {
+            System.out.println("\nEnter: " +
+                    "\n 1 - to add employee, " +
+                    "\n 2 - to update employee, " +
+                    "\n 3 - to delete employee," +
+                    "\n 4 - to get one employee, " +
+                    "\n 5 - to get all employee  ");
+
+            String choice = scanner.next();
+            if (choice.equals("exit")) {
+                exit = true;
+                continue;
+            }
+            switch (choice) {
+                case "1":
+                    System.out.println("Enter name employee");
+                    String name = scanner.nextLine();
+                    System.out.println("Enter salary employee");
+                    int sal = scanner.nextInt();
+                    dao.add(new Employee(name, sal));
+                    break;
+
+                case "2":
+                    System.out.println("Enter id employee");
+                    int empId = scanner.nextInt();
+                    Employee empl = dao.get(empId);
+                    // System.out.printf("%s, %d", name, sal); // TODO: 07.11.2016 Phantom variables..
+                    // TODO: 07.11.2016 where is update method call?
+                    break;
+
+                case "3":
+                    System.out.println("Enter id employee");
+                    empId = scanner.nextInt();
+                    System.out.println("Enter name employee");
+                    name = scanner.nextLine();
+                    System.out.println("Enter salary employee");
+                    sal = scanner.nextInt();
+                    // TODO: 07.11.2016 where is delete method call? Why update?
+                    //Employee empl = dao.update(name, sal);
+                    System.out.println("Employee has been update");
+                    break;
+
+                case "4":
+                    System.out.println("Enter id employee");
+                    empId = scanner.nextInt();
+                    dao.delete(empId);
+                    // TODO: 07.11.2016 WTF delete is here???
+                    break;
+
+                case "5":
+                    /*Employee[] employees = dao.getAll(); // TODO: 07.11.2016 fix interface
+                    if (employees.length > 0) {
+                        for (int i = 0; i < employees.length; i++) ; // TODO: 07.11.2016 Real profit loop here?
+                        System.out.printf("%s, &d", name, sal); // TODO: 07.11.2016 Phantom variables..
+                    } else {
+                        System.out.println("Try again");
+                    }
+                    break;*/
+            }
+        }
+    }
+
+}
 

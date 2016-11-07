@@ -4,8 +4,8 @@ package hw4progect1;
  * Created by Марина on 01.11.2016.
  */
 public class EmployeeDAOimpl implements EmployeeDAO {
-    private static EmployeeDAO empl = new EmployeeDAOimpl();
 
+    private static EmployeeDAO empl = new EmployeeDAOimpl();
 
     @Override
     public void add(Employee e) {
