@@ -1,5 +1,6 @@
 package hw04;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class MainApp {
@@ -43,21 +44,23 @@ public class MainApp {
                     break;
                 }
 
-                case 4:{
+                case 4: {
                     System.out.println("Id");
                     int delId = sc.nextInt();
-                    if ( dao.get(delId) != null)
-                    System.out.println("Employee name - " + dao.get(delId).name + ", salary - " + dao.get(delId).salary);
+                    if (dao.get(delId) != null)
+                        System.out.println("Employee name - " + dao.get(delId).getName() + ", salary - " + dao.get(delId).getSalary());
                     else System.out.println("Employee - null");
                     break;
                 }
 
-                case 5:{
-                    Employee[] getAllArr = dao.getAll();
+                case 5: {
 
-                    for (int i = 0; i < dao.index+1; i++) {
-                        if (getAllArr[i]!= null)
-                        System.out.println("Employee name - " + getAllArr[i].name + ", salary - " + getAllArr[i].salary);
+                    ArrayList<Employee> getAllArr = dao.getAll();
+//                    System.out.println(dao.getAll());
+
+                    for (Employee oneEmployee : getAllArr) {
+                        if (oneEmployee != null)
+                            System.out.println("Employee name - " + oneEmployee.getName() + ", salary - " + oneEmployee.getSalary());
                         else System.out.println("Employee - null");
                     }
                     break;

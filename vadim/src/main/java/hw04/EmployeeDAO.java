@@ -1,5 +1,7 @@
 package hw04;
 
+import java.util.ArrayList;
+
 public interface EmployeeDAO {
 
     void add(Employee e);
@@ -10,5 +12,5 @@ public interface EmployeeDAO {
 
     Employee get(int id);
 
-    Employee[] getAll();
+    ArrayList<Employee> getAll();
 }

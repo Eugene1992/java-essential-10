@@ -47,7 +47,7 @@ public class MainApp {
                     System.out.println("Id");
                     int delId = sc.nextInt();
                     if ( dao.get(delId) != null)
-                    System.out.println("Employee name - " + dao.get(delId).name + ", salary - " + dao.get(delId).salary);
+                    System.out.println("Employee name - " + dao.get(delId).getName() + ", salary - " + dao.get(delId).getSalary());
                     else System.out.println("Employee - null");
                     break;
                 }
@@ -57,7 +57,7 @@ public class MainApp {
 
                     for (int i = 0; i < dao.index+1; i++) {
                         if (getAllArr[i]!= null)
-                        System.out.println("Employee name - " + getAllArr[i].name + ", salary - " + getAllArr[i].salary);
+                        System.out.println("Employee name - " + getAllArr[i].getName() + ", salary - " + getAllArr[i].getSalary());
                         else System.out.println("Employee - null");
                     }
                     break;
