@@ -1,10 +1,16 @@
 package cw04.ex;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.List;
 
 public class EmployeeArrayListDAOImpl implements EmployeeDAO {
 
-    private static ArrayList<Employee> dataStorage = new ArrayList<>();
+    private List<Employee> dataStorage;
+
+    public EmployeeArrayListDAOImpl(List<Employee> dataStorage) {
+        this.dataStorage = dataStorage;
+    }
 
     @Override
     public void add(Employee employee) {

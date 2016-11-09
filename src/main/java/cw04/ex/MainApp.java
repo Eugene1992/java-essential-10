@@ -1,9 +1,10 @@
 package cw04.ex;
 
+import java.util.LinkedList;
 import java.util.Scanner;
 
 public class MainApp {
-    private static EmployeeDAO dao = new EmployeeArrayListDAOImpl();
+    private static EmployeeDAO dao = new EmployeeArrayListDAOImpl(new LinkedList<>());
     private static Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) {
