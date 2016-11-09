@@ -7,6 +7,7 @@ public class Employee {
     private String name;
     private int sal;
 
+
     public Employee(String name, int sal) {
         this.name = name;
         this.sal = sal;
