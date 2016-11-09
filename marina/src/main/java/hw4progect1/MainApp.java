@@ -41,8 +41,8 @@ public class MainApp {
                     System.out.println("Enter id employee");
                     int empId = scanner.nextInt();
                     Employee empl = dao.get(empId);
-                    // System.out.printf("%s, %d", name, sal); // TODO: 07.11.2016 Phantom variables..
-                    // TODO: 07.11.2016 where is update method call?
+                    dao.update(empl, empId);
+                    System.out.println(empl);
                     break;
 
                 case "3":
@@ -52,30 +52,35 @@ public class MainApp {
                     name = scanner.nextLine();
                     System.out.println("Enter salary employee");
                     sal = scanner.nextInt();
-                    // TODO: 07.11.2016 where is delete method call? Why update?
-                    //Employee empl = dao.update(name, sal);
-                    System.out.println("Employee has been update");
+                    dao.delete(empId);
+                    System.out.println("Employee has been delete");
                     break;
 
                 case "4":
                     System.out.println("Enter id employee");
                     empId = scanner.nextInt();
-                    dao.delete(empId);
-                    // TODO: 07.11.2016 WTF delete is here???
+                    dao.get(empId);
+                    System.out.println("%s, %d");
+                    // TODO: name, sal
                     break;
 
                 case "5":
-                    /*Employee[] employees = dao.getAll(); // TODO: 07.11.2016 fix interface
-                    if (employees.length > 0) {
-                        for (int i = 0; i < employees.length; i++) ; // TODO: 07.11.2016 Real profit loop here?
-                        System.out.printf("%s, &d", name, sal); // TODO: 07.11.2016 Phantom variables..
-                    } else {
-                        System.out.println("Try again");
+                    Employee[] employees = dao.getAll();
+                    if (employees.length > 0)  {
+                        for (int i = 0; i < employees.length; i++){
+                            System.out.println(employees);
+                        }// TODO: else
+                           {
+                            System.out.println("Try again");
+                        }
+                        break;
                     }
-                    break;*/
             }
         }
     }
 
+
 }
+
+
 

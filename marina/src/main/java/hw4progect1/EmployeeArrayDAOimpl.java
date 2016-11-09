@@ -3,39 +3,35 @@ package hw4progect1;
 import java.util.ArrayList;
 
 /**
- * Created by Марина on 01.11.2016.
+ * Created by Марина on 09.11.2016.
  */
-public class EmployeeDAOimpl implements EmployeeDAO {
-
-    private EmployeeDAO empl = new EmployeeDAOimpl();
+public class EmployeeArrayDAOimpl implements EmployeeDAO {
+    ArrayList<Employee> StorageEmployee = new ArrayList<>();
 
     @Override
     public void add(Employee e) {
-
+        StorageEmployee.add(e);
     }
 
     @Override
     public Employee get(int id) {
-
-        return (Employee) empl;
+        return StorageEmployee.get(id);
     }
 
     @Override
     public void update(Employee e, int id) {
-
+        StorageEmployee.set(id, e);
     }
 
     @Override
     public void delete(int id) {
-
+        StorageEmployee.remove(id);
     }
 
     @Override
     public ArrayList<Employee> getAll() {
-
-        return null;
+        return StorageEmployee;
     }
-
 
 }
 
