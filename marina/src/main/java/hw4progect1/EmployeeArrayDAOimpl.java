@@ -23,6 +23,7 @@ public class EmployeeArrayDAOimpl implements EmployeeDAO {
         StorageEmployee.set(id, e);
     }
 
+
     @Override
     public void delete(int id) {
         StorageEmployee.remove(id);

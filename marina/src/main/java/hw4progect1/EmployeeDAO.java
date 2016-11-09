@@ -16,6 +16,9 @@ public interface EmployeeDAO {
 
     void delete(int id);
 
+
+
+
     ArrayList<Employee> getAll();
 
 }
