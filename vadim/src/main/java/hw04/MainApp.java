@@ -1,11 +1,12 @@
 package hw04;
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class MainApp {
     public static void main(String[] args) {
-        EmployeeDAOImpl dao = new EmployeeDAOImpl();
+        EmployeeDAOImpl dao = new EmployeeDAOImpl(new ArrayList<>());
 
         Scanner sc = new Scanner(System.in);
         boolean flag = true;
@@ -55,7 +56,7 @@ public class MainApp {
 
                 case 5: {
 
-                    ArrayList<Employee> getAllArr = dao.getAll();
+                    List<Employee> getAllArr = dao.getAll();
 //                    System.out.println(dao.getAll());
 
                     for (Employee oneEmployee : getAllArr) {

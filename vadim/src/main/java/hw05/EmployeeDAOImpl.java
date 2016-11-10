@@ -1,6 +1,5 @@
-package hw04;
+package hw05;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class EmployeeDAOImpl implements EmployeeDAO {
@@ -15,6 +14,14 @@ public class EmployeeDAOImpl implements EmployeeDAO {
     @Override
     public void add(Employee e) {
         dataStorage.add(e);
+    }
+
+    public void add(int id, Employee e){
+        dataStorage.add(id, e);
+    }
+
+    public int size(){
+        return dataStorage.size();
     }
 
     @Override
