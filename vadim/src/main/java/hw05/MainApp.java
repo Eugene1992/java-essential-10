@@ -13,7 +13,7 @@ public class MainApp {
         ResultTableData arrayL = new ResultTableData();
         ResultTableData linkedL = new ResultTableData();
         DataStructure data = new DataStructure();
-        Scanner sc = new Scanner(System.in);
+        //Scanner sc = new Scanner(System.in);
         long startTime;
         long endTime;
         int count = 10000;
@@ -32,17 +32,23 @@ public class MainApp {
 
         //Add test
         startTime = System.currentTimeMillis();
-        for (int i = 0; i < count; i++) {daoArray.add(daoArray.size() / 2, new Employee("Hello"));}
+        for (int i = 0; i < count; i++) {
+            daoArray.add(daoArray.size() / 2, new Employee("Hello"));
+        }
         endTime = System.currentTimeMillis();
         data.setMiddleTime(endTime - startTime);
 
         startTime = System.currentTimeMillis();
-        for (int i = 0; i < count; i++) {daoArray.add(0, new Employee("Hello"));}
+        for (int i = 0; i < count; i++) {
+            daoArray.add(0, new Employee("Hello"));
+        }
         endTime = System.currentTimeMillis();
         data.setStartTime(endTime - startTime);
 
         startTime = System.currentTimeMillis();
-        for (int i = 0; i < count; i++) {daoArray.add( new Employee("Hello"));}
+        for (int i = 0; i < count; i++) {
+            daoArray.add(new Employee("Hello"));
+        }
         endTime = System.currentTimeMillis();
         data.setEndTime(endTime - startTime);
 
@@ -54,17 +60,23 @@ public class MainApp {
 
         //Add test
         startTime = System.currentTimeMillis();
-        for (int i = 0; i < count; i++) {daoLinked.add(daoLinked.size() / 2, new Employee("Hello"));}
+        for (int i = 0; i < count; i++) {
+            daoLinked.add(daoLinked.size() / 2, new Employee("Hello"));
+        }
         endTime = System.currentTimeMillis();
         data.setMiddleTime(endTime - startTime);
 
         startTime = System.currentTimeMillis();
-        for (int i = 0; i < count; i++) {daoLinked.add(0, new Employee("Hello"));}
+        for (int i = 0; i < count; i++) {
+            daoLinked.add(0, new Employee("Hello"));
+        }
         endTime = System.currentTimeMillis();
         data.setStartTime(endTime - startTime);
 
         startTime = System.currentTimeMillis();
-        for (int i = 0; i < count; i++) {daoLinked.add( new Employee("Hello"));}
+        for (int i = 0; i < count; i++) {
+            daoLinked.add(new Employee("Hello"));
+        }
         endTime = System.currentTimeMillis();
         data.setEndTime(endTime - startTime);
 
@@ -76,17 +88,23 @@ public class MainApp {
 
         //Delete test
         startTime = System.currentTimeMillis();
-        for (int i = 0; i < count; i++) {daoArray.delete(daoArray.size() / 2);}
+        for (int i = 0; i < count; i++) {
+            daoArray.delete(daoArray.size() / 2);
+        }
         endTime = System.currentTimeMillis();
         data.setMiddleTime(endTime - startTime);
 
         startTime = System.currentTimeMillis();
-        for (int i = 0; i < count; i++) {daoArray.delete(0);}
+        for (int i = 0; i < count; i++) {
+            daoArray.delete(0);
+        }
         endTime = System.currentTimeMillis();
         data.setStartTime(endTime - startTime);
 
         startTime = System.currentTimeMillis();
-        for (int i = 0; i < count; i++) {daoArray.delete( daoArray.size()-1);}
+        for (int i = 0; i < count; i++) {
+            daoArray.delete(daoArray.size() - 1);
+        }
         endTime = System.currentTimeMillis();
         data.setEndTime(endTime - startTime);
 
@@ -95,17 +113,23 @@ public class MainApp {
 
         //Delete test
         startTime = System.currentTimeMillis();
-        for (int i = 0; i < count; i++) {daoLinked.delete(daoLinked.size() / 2);}
+        for (int i = 0; i < count; i++) {
+            daoLinked.delete(daoLinked.size() / 2);
+        }
         endTime = System.currentTimeMillis();
         data.setMiddleTime(endTime - startTime);
 
         startTime = System.currentTimeMillis();
-        for (int i = 0; i < count; i++) {daoLinked.delete(0);}
+        for (int i = 0; i < count; i++) {
+            daoLinked.delete(0);
+        }
         endTime = System.currentTimeMillis();
         data.setStartTime(endTime - startTime);
 
         startTime = System.currentTimeMillis();
-        for (int i = 0; i < count; i++) {daoLinked.delete( daoLinked.size()-1);}
+        for (int i = 0; i < count; i++) {
+            daoLinked.delete(daoLinked.size() - 1);
+        }
         endTime = System.currentTimeMillis();
         data.setEndTime(endTime - startTime);
 
@@ -114,17 +138,23 @@ public class MainApp {
 
         //update test
         startTime = System.currentTimeMillis();
-        for (int i = 0; i < count; i++) {daoArray.update(new Employee("Hello"), daoArray.size() / 2);}
+        for (int i = 0; i < count; i++) {
+            daoArray.update(new Employee("Hello"), daoArray.size() / 2);
+        }
         endTime = System.currentTimeMillis();
         data.setMiddleTime(endTime - startTime);
 
         startTime = System.currentTimeMillis();
-        for (int i = 0; i < count; i++) {daoArray.update(new Employee("Hello"), 0);}
+        for (int i = 0; i < count; i++) {
+            daoArray.update(new Employee("Hello"), 0);
+        }
         endTime = System.currentTimeMillis();
         data.setStartTime(endTime - startTime);
 
         startTime = System.currentTimeMillis();
-        for (int i = 0; i < count; i++) {daoArray.update(new Employee("Hello"), daoArray.size()-1);}
+        for (int i = 0; i < count; i++) {
+            daoArray.update(new Employee("Hello"), daoArray.size() - 1);
+        }
         endTime = System.currentTimeMillis();
         data.setEndTime(endTime - startTime);
 
@@ -133,17 +163,23 @@ public class MainApp {
 
         //update test
         startTime = System.currentTimeMillis();
-        for (int i = 0; i < count; i++) {daoLinked.update(new Employee("Hello"), daoLinked.size() / 2);}
+        for (int i = 0; i < count; i++) {
+            daoLinked.update(new Employee("Hello"), daoLinked.size() / 2);
+        }
         endTime = System.currentTimeMillis();
         data.setMiddleTime(endTime - startTime);
 
         startTime = System.currentTimeMillis();
-        for (int i = 0; i < count; i++) {daoLinked.update(new Employee("Hello"), 0);}
+        for (int i = 0; i < count; i++) {
+            daoLinked.update(new Employee("Hello"), 0);
+        }
         endTime = System.currentTimeMillis();
         data.setStartTime(endTime - startTime);
 
         startTime = System.currentTimeMillis();
-        for (int i = 0; i < count; i++) {daoLinked.update(new Employee("Hello"), daoLinked.size()-1);}
+        for (int i = 0; i < count; i++) {
+            daoLinked.update(new Employee("Hello"), daoLinked.size() - 1);
+        }
         endTime = System.currentTimeMillis();
         data.setEndTime(endTime - startTime);
 
@@ -152,17 +188,23 @@ public class MainApp {
 
         //get test
         startTime = System.currentTimeMillis();
-        for (int i = 0; i < count; i++) {daoArray.get(daoArray.size() / 2);}
+        for (int i = 0; i < count; i++) {
+            daoArray.get(daoArray.size() / 2);
+        }
         endTime = System.currentTimeMillis();
         data.setMiddleTime(endTime - startTime);
 
         startTime = System.currentTimeMillis();
-        for (int i = 0; i < count; i++) {daoArray.get(0);}
+        for (int i = 0; i < count; i++) {
+            daoArray.get(0);
+        }
         endTime = System.currentTimeMillis();
         data.setStartTime(endTime - startTime);
 
         startTime = System.currentTimeMillis();
-        for (int i = 0; i < count; i++) {daoArray.get( daoArray.size()-1);}
+        for (int i = 0; i < count; i++) {
+            daoArray.get(daoArray.size() - 1);
+        }
         endTime = System.currentTimeMillis();
         data.setEndTime(endTime - startTime);
 
@@ -171,17 +213,23 @@ public class MainApp {
 
         //get test
         startTime = System.currentTimeMillis();
-        for (int i = 0; i < count; i++) {daoLinked.get(daoLinked.size() / 2);}
+        for (int i = 0; i < count; i++) {
+            daoLinked.get(daoLinked.size() / 2);
+        }
         endTime = System.currentTimeMillis();
         data.setMiddleTime(endTime - startTime);
 
         startTime = System.currentTimeMillis();
-        for (int i = 0; i < count; i++) {daoLinked.get(0);}
+        for (int i = 0; i < count; i++) {
+            daoLinked.get(0);
+        }
         endTime = System.currentTimeMillis();
         data.setStartTime(endTime - startTime);
 
         startTime = System.currentTimeMillis();
-        for (int i = 0; i < count; i++) {daoLinked.get( daoLinked.size()-1);}
+        for (int i = 0; i < count; i++) {
+            daoLinked.get(daoLinked.size() - 1);
+        }
         endTime = System.currentTimeMillis();
         data.setEndTime(endTime - startTime);
 
@@ -191,18 +239,18 @@ public class MainApp {
         System.out.println("ArrayList/Linkedlist");
         System.out.println();
         System.out.println("functions \t\t Start \t Middle \t End");
-        System.out.println("add \t\t\t "+arrayL.getAddEL().getStartTime()+"/"+linkedL.getAddEL().getStartTime()+
-                " \t "+arrayL.getAddEL().getMiddleTime()+"/"+linkedL.getAddEL().getMiddleTime()+
-                " \t "+arrayL.getAddEL().getEndTime()+"/"+linkedL.getAddEL().getEndTime());
-        System.out.println("remove \t\t\t "+arrayL.getRemoveEl().getStartTime()+"/"+linkedL.getRemoveEl().getStartTime()+
-                " \t "+arrayL.getRemoveEl().getMiddleTime()+"/"+linkedL.getRemoveEl().getMiddleTime()+
-                " \t "+arrayL.getRemoveEl().getEndTime()+"/"+linkedL.getRemoveEl().getEndTime());
-        System.out.println("update \t\t\t "+arrayL.getUpdateEl().getStartTime()+"/"+linkedL.getUpdateEl().getStartTime()+
-                " \t "+arrayL.getUpdateEl().getMiddleTime()+"/"+linkedL.getUpdateEl().getMiddleTime()+
-                " \t "+arrayL.getUpdateEl().getEndTime()+"/"+linkedL.getUpdateEl().getEndTime());
-        System.out.println("get \t\t\t "+arrayL.getGetEl().getStartTime()+"/"+linkedL.getGetEl().getStartTime()+
-                " \t "+arrayL.getGetEl().getMiddleTime()+"/"+linkedL.getGetEl().getMiddleTime()+
-                " \t "+arrayL.getGetEl().getEndTime()+"/"+linkedL.getGetEl().getEndTime());
+        System.out.println("add \t\t\t " + arrayL.getAddEL().getStartTime() + "/" + linkedL.getAddEL().getStartTime() +
+                " \t " + arrayL.getAddEL().getMiddleTime() + "/" + linkedL.getAddEL().getMiddleTime() +
+                " \t " + arrayL.getAddEL().getEndTime() + "/" + linkedL.getAddEL().getEndTime());
+        System.out.println("remove \t\t\t " + arrayL.getRemoveEl().getStartTime() + "/" + linkedL.getRemoveEl().getStartTime() +
+                " \t " + arrayL.getRemoveEl().getMiddleTime() + "/" + linkedL.getRemoveEl().getMiddleTime() +
+                " \t " + arrayL.getRemoveEl().getEndTime() + "/" + linkedL.getRemoveEl().getEndTime());
+        System.out.println("update \t\t\t " + arrayL.getUpdateEl().getStartTime() + "/" + linkedL.getUpdateEl().getStartTime() +
+                " \t " + arrayL.getUpdateEl().getMiddleTime() + "/" + linkedL.getUpdateEl().getMiddleTime() +
+                " \t " + arrayL.getUpdateEl().getEndTime() + "/" + linkedL.getUpdateEl().getEndTime());
+        System.out.println("get \t\t\t " + arrayL.getGetEl().getStartTime() + "/" + linkedL.getGetEl().getStartTime() +
+                " \t " + arrayL.getGetEl().getMiddleTime() + "/" + linkedL.getGetEl().getMiddleTime() +
+                " \t " + arrayL.getGetEl().getEndTime() + "/" + linkedL.getGetEl().getEndTime());
 
     }
 }
