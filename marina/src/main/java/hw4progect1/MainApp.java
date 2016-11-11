@@ -1,12 +1,13 @@
 package hw4progect1;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 /**
  * Created by Марина on 01.11.2016.
  */
 public class MainApp {
-    private static EmployeeDAO dao = new EmployeeDAOimpl();
+    private static EmployeeDAO dao = new EmployeeArrayDAOimpl();
     private static Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) {
@@ -65,11 +66,11 @@ public class MainApp {
                     break;
 
                 case "5":
-                    Employee[] employees = dao.getAll();
-                    if (employees.length > 0)  {
-                        for (int i = 0; i < employees.length; i++){
-                            System.out.println(employees);
-                        }// TODO: else
+                    ArrayList<Employee> employees = dao.getAll();
+//                    if (employees > 0)  {
+//                        for (int i = 0; i < employees; i++){
+//                            System.out.println(employees);
+//                        }// TODO: else
                            {
                             System.out.println("Try again");
                         }
@@ -80,7 +81,7 @@ public class MainApp {
     }
 
 
-}
+
 
 
 
