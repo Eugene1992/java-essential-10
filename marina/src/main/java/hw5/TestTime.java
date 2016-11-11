@@ -12,7 +12,7 @@ public class TestTime {
     public static void main(String[] args) {
         List<String> ll = new LinkedList<>();
         List<String> al = new ArrayList<>();
-        int count = 100000;
+        int count = 10000;
 
         for (int i = 0; i < count; i++) {
             al.add("Hello");
@@ -28,14 +28,14 @@ public class TestTime {
         }
         long endALaddToMiddle = System.currentTimeMillis();
 
-        System.out.println(endALaddToMiddle - startALaddToMiddle);
+        System.out.println("AL: " + (endALaddToMiddle - startALaddToMiddle));
 
         long startLLaddToMiddle = System.currentTimeMillis();
         for (int i = 0; i < count; i++) {
             ll.add(ll.size() / 2, "Hello");
         }
         long endLLaddToMiddle = System.currentTimeMillis();
-        System.out.println(endLLaddToMiddle - startLLaddToMiddle);
+        System.out.println("LL: " + (endLLaddToMiddle - startLLaddToMiddle));
         //////////////////////////////////////////////////////////////
 
 ///////////////////////////////////////////////////////////////////
@@ -46,14 +46,14 @@ public class TestTime {
         }
         long endALaddToStart = System.currentTimeMillis();
 
-        System.out.println(endALaddToStart - startALaddToStart);
+        System.out.println("LL: " + (endALaddToStart - startALaddToStart));
 
         long startLLaddToStart = System.currentTimeMillis();
         for (int i = 0; i < count; i++) {
             ll.add(0, "Hello");
         }
         long endLLaddToStart = System.currentTimeMillis();
-        System.out.println(endLLaddToStart - startLLaddToStart);
+        System.out.println("AL: " + (endLLaddToStart - startLLaddToStart));
         /////////////////////////////////////////////////////////
         System.out.println("Add in end");
 
@@ -63,7 +63,7 @@ public class TestTime {
         }
         long endALaddToEnd = System.currentTimeMillis();
 
-        System.out.println(endALaddToEnd - startALaddToEnd);
+        System.out.println("LL: " + (endALaddToEnd - startALaddToEnd));
 
         long startLLaddToEnd = System.currentTimeMillis();
         for (int i = 0; i < count; i++) {
@@ -78,37 +78,37 @@ public class TestTime {
         for (int i = 0; i < count; i++) {
             ll.remove("Hello");
         }
-//        System.out.println("Remove in start");
-//        long startALrem = System.currentTimeMillis();
-//        for (int i = 0; i < count; i++) {
-//            al.remove(0, "Hello");
-//        }
-//        long endALrem = System.currentTimeMillis();
-//
-//        System.out.println(endALaddToEnd - startALaddToEnd);
-//
-//        long startLLrem = System.currentTimeMillis();
-//        for (int i = 0; i<count; i++){
-//            ll.remove(0, "Hello");
-//        }
-//        long endLLrem = System.currentTimeMillis();
-//        System.out.println(endLLrem-startLLrem);
+        System.out.println("Remove in start");
+        long startALrem = System.currentTimeMillis();
+        for (int i = 0; i < count; i++) {
+            al.remove(0);
+        }
+        long endALrem = System.currentTimeMillis();
+
+        System.out.println(endALaddToEnd - startALaddToEnd);
+
+        long startLLrem = System.currentTimeMillis();
+        for (int i = 0; i<count; i++){
+            ll.remove(0);
+        }
+        long endLLrem = System.currentTimeMillis();
+        System.out.println(endLLrem-startLLrem);
 //////////////////////////////////////////////////////////////
-//        System.out.println("Remove in middle");
-//        long startALremMid = System.currentTimeMillis();
-//        for (int i = 0; i < count; i++) {
-//            al.remove(al.size() / 2, "Hello");
-//        }
-//        long endALremMid = System.currentTimeMillis();
-//
-//        System.out.println(endALaddToEnd - startALaddToEnd);
-//
-//        long startLLremMid = System.currentTimeMillis();
-//        for (int i = 0; i<count; i++){
-//            ll.remove(ll.size()/2, "Hello");
-//        }
-//        long endLLremMid = System.currentTimeMillis();
-//        System.out.println(endLLremMid-startLLremMid);
+        System.out.println("Remove in middle");
+        long startALremMid = System.currentTimeMillis();
+        for (int i = 0; i < count; i++) {
+            al.remove(al.size() / 2);
+        }
+        long endALremMid = System.currentTimeMillis();
+
+        System.out.println(endALaddToEnd - startALaddToEnd);
+
+        long startLLremMid = System.currentTimeMillis();
+        for (int i = 0; i<count; i++){
+            ll.remove(ll.size()/2);
+        }
+        long endLLremMid = System.currentTimeMillis();
+        System.out.println(endLLremMid-startLLremMid);
         ///////////////////////////////////////
         System.out.println("remove in end");
         long startALremEnd = System.currentTimeMillis();

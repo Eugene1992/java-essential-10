@@ -1,5 +1,7 @@
 package cw04.ex;
 
+import cw08.exceptions.NegativeSalaryValueException;
+
 import java.util.LinkedList;
 import java.util.Scanner;
 
@@ -28,7 +30,13 @@ public class MainApp {
             }
             switch (choice) {
                 case "1":
-                    dao.add(getEmployee());
+                    try {
+                        dao.add(getEmployee());
+                    } catch (NegativeSalaryValueException e) {
+                        e.printStackTrace();
+                    } catch (IllegalArgumentException e) {
+                        e.printStackTrace();
+                    }
                     System.out.println("Employee successfully added.");
                 break;
 
@@ -39,7 +47,11 @@ public class MainApp {
                 break;
 
                 case "3":
-                    dao.update(getId(), getEmployee());
+                    try {
+                        dao.update(getId(), getEmployee());
+                    } catch (NegativeSalaryValueException e) {
+                        System.out.println("... try again");
+                    }
                     System.out.println("Employee successfully updated.");
                 break;
 
@@ -69,13 +81,15 @@ public class MainApp {
         return String.format("%d %s %d %d\n", id, employee.getName(), employee.getAge(), employee.getSalary());
     }
 
-    private static Employee getEmployee() {
+    private static Employee getEmployee() throws NegativeSalaryValueException {
         System.out.println("Enter new Employee name: ");
         String empName = scanner.next();
         System.out.println("Enter new Employee age: ");
         int empAge = scanner.nextInt();
+        if (empAge < 0) throw new IllegalArgumentException("Negative age value");
         System.out.println("Enter new Employee salary: ");
         int empSalary = scanner.nextInt();
+        if (empSalary < 0) throw new NegativeSalaryValueException();
         return new Employee(empName, empAge, empSalary);
     }
 

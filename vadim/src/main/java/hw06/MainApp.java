@@ -10,7 +10,7 @@ public class MainApp {
 
         long startTime;
         long endTime;
-        int count = 10000;
+        int count = 100000;
 
         for (int i = 0; i < count; i++) {
             daoArray.add(new Employee("Hello"));
