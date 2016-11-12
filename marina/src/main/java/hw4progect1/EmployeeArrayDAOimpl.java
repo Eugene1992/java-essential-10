@@ -19,8 +19,9 @@ public class EmployeeArrayDAOimpl implements EmployeeDAO {
     }
 
     @Override
-    public void update(Employee e, int id) {
+    public Employee[] update(Employee e, int id) {
         StorageEmployee.set(id, e);
+        return new Employee[0];
     }
 
 

@@ -42,8 +42,12 @@ public class MainApp {
                     System.out.println("Enter id employee");
                     int empId = scanner.nextInt();
                     Employee empl = dao.get(empId);
+                    System.out.println("Enter name employee");
+                    name = scanner.next();
+                    System.out.println("Enter salary employee");
+                    sal = scanner.nextInt();
                     // TODO: 11.11.2016 make real update
-                    dao.update(empl, empId);
+                    Employee[] employees = dao.update(empl, empId);
                     System.out.println(empl);
                     break;
 
@@ -51,10 +55,7 @@ public class MainApp {
                     System.out.println("Enter id employee");
                     empId = scanner.nextInt();
                     // TODO: 11.11.2016 Do you really need to request name and salary when you want to delete employee?
-                    System.out.println("Enter name employee");
-                    name = scanner.nextLine();
-                    System.out.println("Enter salary employee");
-                    sal = scanner.nextInt();
+
                     dao.delete(empId);
                     System.out.println("Employee has been delete");
                     break;
@@ -67,14 +68,14 @@ public class MainApp {
                     break;
 
                 case "5":
-                    ArrayList<Employee> employees = dao.getAll();
-                    if (employees.size() > 0) {
-                        for (int i = 0; i < employees.size(); i++) {
-                            System.out.println(employees);
+                    ArrayList<Employee> employ = dao.getAll();
+                    if (employ.size() > 0) {
+                        for (int i = 0; i < employ.size(); i++) {
+                            System.out.println(employ);
                         }
                     } else {
                         // TODO: 11.11.2016 Describe message when employees is empty
-                        System.out.println("Try again");
+                        System.out.println("Employee not detected. Try again later");
                     }
                     break;
             }
