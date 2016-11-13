@@ -41,21 +41,19 @@ public class MainApp {
                 case "2":
                     System.out.println("Enter id employee");
                     int empId = scanner.nextInt();
-                    Employee empl = dao.get(empId);
                     System.out.println("Enter name employee");
                     name = scanner.next();
                     System.out.println("Enter salary employee");
                     sal = scanner.nextInt();
                     // TODO: 11.11.2016 make real update
-                    Employee[] employees = dao.update(empl, empId);
-                    System.out.println(empl);
+                    Employee uempl = new Employee(name, sal);
+                    dao.update(uempl, empId);
+                    System.out.println(uempl + " has been updated");
                     break;
 
                 case "3":
                     System.out.println("Enter id employee");
                     empId = scanner.nextInt();
-                    // TODO: 11.11.2016 Do you really need to request name and salary when you want to delete employee?
-
                     dao.delete(empId);
                     System.out.println("Employee has been delete");
                     break;
@@ -64,17 +62,16 @@ public class MainApp {
                     System.out.println("Enter id employee");
                     empId = scanner.nextInt();
                     Employee employee = dao.get(empId);
-                    System.out.printf("%s, %d", employee.getName(), employee.getSal());
+                    System.out.println(employee);
                     break;
 
                 case "5":
                     ArrayList<Employee> employ = dao.getAll();
                     if (employ.size() > 0) {
                         for (int i = 0; i < employ.size(); i++) {
-                            System.out.println(employ);
+                            System.out.println(employ.get(i));
                         }
                     } else {
-                        // TODO: 11.11.2016 Describe message when employees is empty
                         System.out.println("Employee not detected. Try again later");
                     }
                     break;

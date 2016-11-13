@@ -7,7 +7,6 @@ public class Employee {
     private String name;
     private int sal;
 
-
     public Employee(String name, int sal) {
         this.name = name;
         this.sal = sal;
@@ -27,5 +26,13 @@ public class Employee {
 
     public void setSal(int sal) {
         this.sal = sal;
+    }
+
+    @Override
+    public String toString() {
+        return "Employee{" +
+                "name='" + name + '\'' +
+                ", sal=" + sal +
+                '}';
     }
 }

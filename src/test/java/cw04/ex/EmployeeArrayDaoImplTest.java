@@ -31,4 +31,12 @@ public class EmployeeArrayDaoImplTest {
         Employee result = dao.get(0);
         Assert.assertNotNull("Name is null", result.getName());
     }
+
+    @Test
+    public void getTest() {
+        dao.add(testEmployee);
+        Employee get = dao.get(0);
+        Employee result = new Employee("Ivan", 23, 10000);
+        Assert.assertEquals("Employees are not equal", get, result);
+    }
 }

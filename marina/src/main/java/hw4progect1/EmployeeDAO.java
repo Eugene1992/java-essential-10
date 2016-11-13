@@ -9,16 +9,11 @@ public interface EmployeeDAO {
 
     void add(Employee e);
 
-
     Employee get(int id);
 
     Employee[] update(Employee e, int id);
 
     void delete(int id);
 
-
-
-
     ArrayList<Employee> getAll();
-
 }
